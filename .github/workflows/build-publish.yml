@@ -22,10 +22,10 @@ jobs:
        - name: Setup Node npm
          uses: actions/setup-node@v3
          with:
-           node-version: 16
+           node-version: 16.17.1
            
        - name: Set CLI Config
-         run: jf npm-config --global=true --repo-resolve=npm-virtual --repo-deploy=npm-virtual
+         run: cd package && jf npm-config --global=true --repo-resolve=npm-virtual --repo-deploy=npm-virtual
            
        - name: Install Deps
          run: cd package && jf npm install
